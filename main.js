@@ -1,5 +1,8 @@
 'use strict';
 
+console.log('Welcome to Rock Paper Scissors!');
+console.log(`To play the game, type 'console.log(getComputerChoice())'.`);
+
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
 const rock = 'Rock';
 const paper = 'Paper';
