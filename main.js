@@ -1,3 +1,5 @@
+'use strict';
+
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
 const rock = 'Rock';
 const paper = 'Paper';
