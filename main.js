@@ -7,6 +7,12 @@ const scissors = 'Scissors';
 const getRandomChoice = Math.floor(Math.random() * 3);
 
 // CALL the get computer choice to return the three global constants randomly
-// IF random choice === 0 THEN return rock
-// ELSE IF random choice === 1 return paper
-// ELSE return scissors
+function getComputerChoice() {
+  if (getRandomChoice === 0) {
+    return rock;
+  } else if (getRandomChoice === 1) {
+    return paper;
+  } else {
+    return scissors;
+  }
+}
