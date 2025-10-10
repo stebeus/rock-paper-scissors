@@ -44,15 +44,19 @@ function getHumanChoice() {
 let computerScore = 0;
 let humanScore = 0;
 
+//
 /**
- * PROBLEM: Run a single round
- *
- * 1. Ask for user to insert his input
- * 2. INPUTS: Store human and computer choices as arguments
- * 3. Validates Victory, Defeat and Draw cases by round
- *    3.1 Output case
- * 4. Increment the victor's score
- *    4.1 Output score
- * 5. Output game is over
- *    5.1 Output winner
- */
+ * Store the human and computer inputs and validate both
+ *   IF Rock === Rock OR Scissors === Scissors OR Paper === Paper THEN
+ *     PRINT Draw! (Human choice, Computer choice)
+ *   ELSE IF user chooses Rock over Scissors OR Scissors over Paper OR Paper over Rock
+ *     PRINT You won! (Human choice, Computer choice)
+ *     Increment and PRINT human score
+ *   ELSE
+ *     PRINT You lost! (Human choice, Computer choice)
+ *     Increment and PRINT computer score
+ *   ENDIF
+ *   Ends game and output who won based on the cases above.
+ * Store the get choice functions in human and computer selections
+ * CALL Play Round to initiate game
+ * */
