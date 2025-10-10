@@ -60,6 +60,14 @@ function playRound(humanChoice, computerChoice) {
   }
 
   console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
+
+  if (humanScore === computerScore) {
+    console.log(`Game's over! TIE`);
+  } else if (humanScore > computerScore) {
+    console.log(`Game's over! VICTORY`);
+  } else {
+    console.log(`Game's over! DEFEAT`);
+  }
 }
 
 // Store the get choice functions in human and computer selections
