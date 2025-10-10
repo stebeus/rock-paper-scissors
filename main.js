@@ -4,9 +4,9 @@ console.log('Welcome to Rock Paper Scissors!');
 console.log(`To play the game, type 'console.log(getComputerChoice())'.`);
 
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
-const rock = 'Rock';
-const paper = 'Paper';
-const scissors = 'Scissors';
+const rock = 'ROCK';
+const paper = 'PAPER';
+const scissors = 'SCISSORS';
 
 // CALL the get computer choice to return the three global constants randomly
 function getComputerChoice() {
