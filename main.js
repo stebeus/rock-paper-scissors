@@ -76,16 +76,3 @@ const computerSelection = getComputerChoice();
 
 // Initiate game with selected inputs
 playRound(humanSelection, computerSelection);
-
-/**
- *   IF Rock === Rock OR Scissors === Scissors OR Paper === Paper THEN
- *     PRINT Draw! (Human choice, Computer choice)
- *   ELSE IF user chooses Rock over Scissors OR Scissors over Paper OR Paper over Rock
- *     PRINT You won! (Human choice, Computer choice)
- *     Increment and PRINT human score
- *   ELSE
- *     PRINT You lost! (Human choice, Computer choice)
- *     Increment and PRINT computer score
- *   ENDIF
- *   Ends game and output who won based on the cases above.
- * */
