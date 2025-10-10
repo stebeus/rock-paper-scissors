@@ -67,6 +67,11 @@ function playGame() {
 
   // Loop to five rounds
   for (let currentRound = 0; currentRound < 5; currentRound++) {
+    // Store the get choice functions in human and computer selections
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    // Initiate round
     playRound(humanSelection, computerSelection);
 
     // End the game
@@ -81,10 +86,6 @@ function playGame() {
     }
   }
 }
-
-// Store the get choice functions in human and computer selections
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 // Initiate game
 playGame();
