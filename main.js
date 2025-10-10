@@ -29,7 +29,7 @@ function getHumanChoice() {
   if (choice === rock || choice === paper || choice === scissors) {
     return choice;
   } else {
-    return `INVALID CHOICE! Type 'console.log(getHumanChoice())' again and insert either Rock, Paper or Scissors`;
+    return `INVALID CHOICE! Type 'console.log(getHumanChoice())' again and insert either Rock, Paper or Scissors.`;
   }
 }
 
