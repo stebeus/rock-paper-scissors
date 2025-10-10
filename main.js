@@ -35,7 +35,7 @@ function getHumanChoice() {
     print(choice);
   } else {
     print(
-      `INVALID CHOICE! Type 'console.log(getHumanChoice())' again and insert either Rock, Paper or Scissors.`
+      `INVALID CHOICE! Type 'getHumanChoice()' again and insert either Rock, Paper or Scissors.`
     );
   }
 }
