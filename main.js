@@ -33,43 +33,45 @@ function getHumanChoice() {
   }
 }
 
-// Store the user and computer scores
-let computerScore = 0;
-let humanScore = 0;
+// Store score and initialize five rounds
+function playGame() {
+  let computerScore = 0;
+  let humanScore = 0;
 
-// Store human and computer inputs for one round
-function playRound(humanChoice, computerChoice) {
-  // Validate human and computer inputs, then increment score based on draw, victory and defeat cases.
-  if (
-    (humanChoice === rock && computerChoice === rock) ||
-    (humanChoice === scissors && computerChoice === scissors) ||
-    (humanChoice === paper && computerChoice === paper)
-  ) {
-    console.log(
-      `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
-    );
-  } else if (
-    (humanChoice === rock && computerChoice === scissors) ||
-    (humanChoice === scissors && computerChoice === paper) ||
-    (humanChoice === paper && computerChoice === rock)
-  ) {
-    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-    ++humanScore;
-  } else {
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-    ++computerScore;
-  }
+  // Store human and computer inputs for one round
+  function playRound(humanChoice, computerChoice) {
+    // Validate human and computer inputs, then increment score based on draw, victory and defeat cases.
+    if (
+      (humanChoice === rock && computerChoice === rock) ||
+      (humanChoice === scissors && computerChoice === scissors) ||
+      (humanChoice === paper && computerChoice === paper)
+    ) {
+      console.log(
+        `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
+      );
+    } else if (
+      (humanChoice === rock && computerChoice === scissors) ||
+      (humanChoice === scissors && computerChoice === paper) ||
+      (humanChoice === paper && computerChoice === rock)
+    ) {
+      console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+      ++humanScore;
+    } else {
+      console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+      ++computerScore;
+    }
 
-  // Display score
-  console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
+    // Display score
+    console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
 
-  // End the round
-  if (humanScore === computerScore) {
-    console.log(`Game's over! TIE`);
-  } else if (humanScore > computerScore) {
-    console.log(`Game's over! VICTORY`);
-  } else {
-    console.log(`Game's over! DEFEAT`);
+    // End the round
+    if (humanScore === computerScore) {
+      console.log(`Game's over! TIE`);
+    } else if (humanScore > computerScore) {
+      console.log(`Game's over! VICTORY`);
+    } else {
+      console.log(`Game's over! DEFEAT`);
+    }
   }
 }
 
@@ -87,5 +89,3 @@ playRound(humanSelection, computerSelection);
  * Stack score
  * End game with victor declaration
  */
-
-function playGame() {}
