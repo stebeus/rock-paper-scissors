@@ -1,7 +1,13 @@
 'use strict';
 
-console.log('Welcome to Rock Paper Scissors!');
-console.log(`To play the game, type 'playGame()'.`);
+alert(`Welcome to Rock Paper Scissors!
+
+Press F12 to play the game.
+
+If the console is not showing "GAME LOADED", refresh the page.
+  `);
+
+console.log('GAME LOADED');
 
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
 const rock = 'ROCK';
