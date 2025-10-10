@@ -13,13 +13,15 @@ function getComputerChoice() {
   // Store a three random number generator in the get random choice constant
   const getRandomChoice = Math.floor(Math.random() * 3);
 
-  if (getRandomChoice === 0) {
-    return rock;
-  } else if (getRandomChoice === 1) {
-    return paper;
-  } else {
-    return scissors;
-  }
+  // if (getRandomChoice === 0) {
+  //   return rock;
+  // } else if (getRandomChoice === 1) {
+  //   return paper;
+  // } else {
+  //   return scissors;
+  // }
+
+  return rock;
 }
 
 // CALL a prompt to store and validate the user's input
@@ -39,8 +41,15 @@ let humanScore = 0;
 
 // Store the human and computer inputs and validate both
 function playRound(humanChoice, computerChoice) {
-  console.log(humanChoice);
-  console.log(computerChoice);
+  if (humanChoice === rock && computerChoice === rock) {
+    return console.log(
+      `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
+    );
+  } else {
+    return console.log(
+      'Test failure! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})'
+    );
+  }
 }
 
 // Store the get choice functions in human and computer selections
