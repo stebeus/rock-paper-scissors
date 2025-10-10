@@ -37,8 +37,9 @@ function getHumanChoice() {
 let computerScore = 0;
 let humanScore = 0;
 
-// Store the human and computer inputs and validate both
+// Store human and computer inputs for one round
 function playRound(humanChoice, computerChoice) {
+  // Validate human and computer inputs, then increment score based on draw, victory and defeat cases.
   if (
     (humanChoice === rock && computerChoice === rock) ||
     (humanChoice === scissors && computerChoice === scissors) ||
@@ -59,8 +60,10 @@ function playRound(humanChoice, computerChoice) {
     ++computerScore;
   }
 
+  // Display score
   console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
 
+  // End the round
   if (humanScore === computerScore) {
     console.log(`Game's over! TIE`);
   } else if (humanScore > computerScore) {
