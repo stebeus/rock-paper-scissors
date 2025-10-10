@@ -43,3 +43,16 @@ function getHumanChoice() {
 // Store the user and computer scores
 let computerScore = 0;
 let humanScore = 0;
+
+/**
+ * PROBLEM: Run a single round
+ *
+ * 1. Ask for user to insert his input
+ * 2. INPUTS: Store human and computer choices as arguments
+ * 3. Validates Victory, Defeat and Draw cases by round
+ *    3.1 Output case
+ * 4. Increment the victor's score
+ *    4.1 Output score
+ * 5. Output game is over
+ *    5.1 Output winner
+ */
