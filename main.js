@@ -23,3 +23,6 @@ function getComputerChoice() {
 }
 
 // CALL a prompt to store and validate the user's input
+function getHumanChoice() {
+  const choice = prompt('What will you choose?');
+}
