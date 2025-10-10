@@ -50,8 +50,11 @@ function playRound(humanChoice, computerChoice) {
   console.log(computerChoice);
 }
 
+// Store the get choice functions in human and computer selections
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
 /**
- *
  *   IF Rock === Rock OR Scissors === Scissors OR Paper === Paper THEN
  *     PRINT Draw! (Human choice, Computer choice)
  *   ELSE IF user chooses Rock over Scissors OR Scissors over Paper OR Paper over Rock
@@ -62,6 +65,5 @@ function playRound(humanChoice, computerChoice) {
  *     Increment and PRINT computer score
  *   ENDIF
  *   Ends game and output who won based on the cases above.
- * Store the get choice functions in human and computer selections
  * CALL Play Round to initiate game
  * */
