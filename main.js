@@ -44,9 +44,14 @@ function getHumanChoice() {
 let computerScore = 0;
 let humanScore = 0;
 
-//
+// Store the human and computer inputs and validate both
+function playRound(humanChoice, computerChoice) {
+  console.log(humanChoice);
+  console.log(computerChoice);
+}
+
 /**
- * Store the human and computer inputs and validate both
+ *
  *   IF Rock === Rock OR Scissors === Scissors OR Paper === Paper THEN
  *     PRINT Draw! (Human choice, Computer choice)
  *   ELSE IF user chooses Rock over Scissors OR Scissors over Paper OR Paper over Rock
