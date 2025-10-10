@@ -73,6 +73,11 @@ function playGame() {
       console.log(`Game's over! DEFEAT`);
     }
   }
+
+  // Loop to five rounds
+  for (let currentRound = 0; currentRound < 5; currentRound++) {
+    playRound(humanSelection, computerSelection);
+  }
 }
 
 // Store the get choice functions in human and computer selections
