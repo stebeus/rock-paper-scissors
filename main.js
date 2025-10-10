@@ -49,7 +49,7 @@ function playRound(humanChoice, computerChoice) {
     );
   } else {
     return console.log(
-      'Test failure! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})'
+      `Test failure! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
     );
   }
 }
