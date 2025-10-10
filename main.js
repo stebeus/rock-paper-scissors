@@ -86,8 +86,8 @@ function playGame() {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-// Initiate game with selected inputs
-playRound(humanSelection, computerSelection);
+// Initiate game
+playGame();
 
 /**
  * PROBLEM: Call playRound five times
