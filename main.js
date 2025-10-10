@@ -54,6 +54,9 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+// Initiate game with selected inputs
+playRound(humanSelection, computerSelection);
+
 /**
  *   IF Rock === Rock OR Scissors === Scissors OR Paper === Paper THEN
  *     PRINT Draw! (Human choice, Computer choice)
@@ -65,5 +68,4 @@ const computerSelection = getComputerChoice();
  *     Increment and PRINT computer score
  *   ENDIF
  *   Ends game and output who won based on the cases above.
- * CALL Play Round to initiate game
  * */
