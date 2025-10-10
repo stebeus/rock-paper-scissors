@@ -79,3 +79,13 @@ const computerSelection = getComputerChoice();
 
 // Initiate game with selected inputs
 playRound(humanSelection, computerSelection);
+
+/**
+ * PROBLEM: Call playRound five times
+ *
+ * Move functions and variables
+ * Stack score
+ * End game with victor declaration
+ */
+
+function playGame() {}
