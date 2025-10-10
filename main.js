@@ -41,7 +41,11 @@ let humanScore = 0;
 
 // Store the human and computer inputs and validate both
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice === rock && computerChoice === rock) {
+  if (
+    (humanChoice === rock && computerChoice === rock) ||
+    (humanChoice === scissors && computerChoice === scissors) ||
+    (humanChoice === paper && computerChoice == paper)
+  ) {
     return console.log(
       `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
     );
