@@ -52,9 +52,7 @@ function playGame() {
       (humanChoice === scissors && computerChoice === scissors) ||
       (humanChoice === paper && computerChoice === paper)
     ) {
-      console.log(
-        `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
-      );
+      console.log(`Draw! ${humanChoice} doesn't beat ${computerChoice}...`);
     } else if (
       (humanChoice === rock && computerChoice === scissors) ||
       (humanChoice === scissors && computerChoice === paper) ||
