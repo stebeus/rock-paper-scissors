@@ -19,11 +19,11 @@ function getComputerChoice() {
   const getRandomChoice = Math.floor(Math.random() * 3);
 
   if (getRandomChoice === 0) {
-    print(rock);
+    return rock;
   } else if (getRandomChoice === 1) {
-    print(paper);
+    return paper;
   } else {
-    print(scissors);
+    return scissors;
   }
 }
 
@@ -32,11 +32,9 @@ function getHumanChoice() {
   const choice = prompt('What will you choose?').toUpperCase();
 
   if (choice === rock || choice === paper || choice === scissors) {
-    print(choice);
+    return choice;
   } else {
-    print(
-      `INVALID CHOICE! Type 'getHumanChoice()' again and insert either Rock, Paper or Scissors.`
-    );
+    return `INVALID CHOICE! Type 'getHumanChoice()' again and insert either Rock, Paper or Scissors.`;
   }
 }
 
