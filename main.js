@@ -13,15 +13,13 @@ function getComputerChoice() {
   // Store a three random number generator in the get random choice constant
   const getRandomChoice = Math.floor(Math.random() * 3);
 
-  // if (getRandomChoice === 0) {
-  //   return rock;
-  // } else if (getRandomChoice === 1) {
-  //   return paper;
-  // } else {
-  //   return scissors;
-  // }
-
-  return rock;
+  if (getRandomChoice === 0) {
+    return rock;
+  } else if (getRandomChoice === 1) {
+    return paper;
+  } else {
+    return scissors;
+  }
 }
 
 // CALL a prompt to store and validate the user's input
