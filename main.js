@@ -8,13 +8,18 @@ const rock = 'ROCK';
 const paper = 'PAPER';
 const scissors = 'SCISSORS';
 
+// Simplify return console log with print function
+function print(value = `To insert text, wrap it around single quotes ('')`) {
+  return console.log(value);
+}
+
 // CALL the get computer choice to return the three global constants randomly
 function getComputerChoice() {
   // Store a three random number generator in the get random choice constant
   const getRandomChoice = Math.floor(Math.random() * 3);
 
   if (getRandomChoice === 0) {
-    return rock;
+    return console.log(rock);
   } else if (getRandomChoice === 1) {
     return paper;
   } else {
