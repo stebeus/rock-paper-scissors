@@ -21,3 +21,8 @@ function getComputerChoice() {
     return scissors;
   }
 }
+
+// Prompt to store the user's choice
+// Validate it
+// IF it is invalid, PRINT invalid
+// ELSE, PRINT his choice
