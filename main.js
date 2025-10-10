@@ -47,9 +47,17 @@ function playRound(humanChoice, computerChoice) {
     return console.log(
       `Draw! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
     );
+  } else if (
+    (humanChoice === rock && computerChoice === scissors) ||
+    (humanChoice === scissors && computerChoice === paper) ||
+    (humanChoice === paper && computerChoice == rock)
+  ) {
+    return console.log(
+      `You won! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
+    );
   } else {
     return console.log(
-      `Test failure! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
+      `You lost! (Human choice: ${humanChoice}; Computer choice: ${computerChoice})`
     );
   }
 }
