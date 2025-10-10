@@ -63,20 +63,22 @@ function playGame() {
 
     // Display score
     console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
-
-    // End the round
-    if (humanScore === computerScore) {
-      console.log(`Game's over! TIE`);
-    } else if (humanScore > computerScore) {
-      console.log(`Game's over! VICTORY`);
-    } else {
-      console.log(`Game's over! DEFEAT`);
-    }
   }
 
   // Loop to five rounds
   for (let currentRound = 0; currentRound < 5; currentRound++) {
     playRound(humanSelection, computerSelection);
+
+    // End the game
+    if (currentRound === 4) {
+      if (humanScore === computerScore) {
+        console.log(`Game's over! TIE`);
+      } else if (humanScore > computerScore) {
+        console.log(`Game's over! VICTORY`);
+      } else {
+        console.log(`Game's over! DEFEAT`);
+      }
+    }
   }
 }
 
