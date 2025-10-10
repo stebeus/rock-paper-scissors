@@ -19,7 +19,7 @@ function getComputerChoice() {
   const getRandomChoice = Math.floor(Math.random() * 3);
 
   if (getRandomChoice === 0) {
-    print(console.log(rock));
+    print(rock);
   } else if (getRandomChoice === 1) {
     print(paper);
   } else {
