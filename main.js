@@ -4,7 +4,7 @@ alert(`Welcome to Rock Paper Scissors!
 
 Press F12 to play the game.
 
-If the console is not showing "GAME LOADED", refresh the page.
+If the console is not showing "GAME LOADED" on page load, press Cancel and refresh the page.
   `);
 
 console.log('GAME LOADED');
