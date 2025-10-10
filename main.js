@@ -32,3 +32,7 @@ function getHumanChoice() {
     return `INVALID CHOICE! Type 'console.log(getHumanChoice())' again and insert either Rock, Paper or Scissors`;
   }
 }
+
+// Store the user and computer scores
+let computerScore = 0;
+let humanScore = 0;
