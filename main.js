@@ -25,4 +25,10 @@ function getComputerChoice() {
 // CALL a prompt to store and validate the user's input
 function getHumanChoice() {
   const choice = prompt('What will you choose?');
+
+  if (choice === rock || choice === paper || choice === scissors) {
+    return choice;
+  } else {
+    return `INVALID CHOICE! Type 'getHumanChoice()' again and insert either Rock, Paper or Scissors`;
+  }
 }
