@@ -58,6 +58,8 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     ++computerScore;
   }
+
+  console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
 }
 
 // Store the get choice functions in human and computer selections
