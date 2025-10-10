@@ -22,7 +22,4 @@ function getComputerChoice() {
   }
 }
 
-// Prompt to store the user's choice
-// Validate it
-// IF it is invalid, PRINT invalid
-// ELSE, PRINT his choice
+// CALL a prompt to store and validate the user's input
