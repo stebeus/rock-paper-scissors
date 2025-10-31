@@ -27,10 +27,6 @@ const btnRock = document.querySelector("#btn-rock");
 const btnPaper = document.querySelector("#btn-paper");
 const btnScissors = document.querySelector("#btn-scissors");
 
-btnRock.addEventListener("click", (e) => {
-  console.log(e.target);
-});
-
 function getHumanChoice() {
   const choice = prompt("Choose Rock, Paper or Scissors!").toUpperCase();
 
@@ -70,6 +66,18 @@ function playGame() {
     // Display score
     console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
   }
+
+  btnRock.addEventListener("click", () => {
+    playRound(rock, getComputerChoice());
+  });
+
+  btnPaper.addEventListener("click", () => {
+    playRound(paper, getComputerChoice());
+  });
+
+  btnScissors.addEventListener("click", () => {
+    playRound(scissors, getComputerChoice());
+  });
 }
 
 // Initiate game
