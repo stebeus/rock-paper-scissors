@@ -9,6 +9,8 @@ const btnRock = document.querySelector("#btn-rock");
 const btnPaper = document.querySelector("#btn-paper");
 const btnScissors = document.querySelector("#btn-scissors");
 
+const gameResultsLog = document.querySelector("#game-results");
+
 // CALL the get computer choice to return the three global constants randomly
 function getComputerChoice() {
   // Store a three random number generator in the get random choice constant
@@ -29,6 +31,7 @@ function playGame() {
 
   let computerScore = 0;
   let humanScore = 0;
+  let loggedInfo;
 
   // Store human and computer inputs for one round
   function playRound(humanChoice, computerChoice) {
@@ -38,21 +41,28 @@ function playGame() {
       (humanChoice === scissors && computerChoice === scissors) ||
       (humanChoice === paper && computerChoice === paper)
     ) {
-      console.log(`Draw! ${humanChoice} doesn't beat ${computerChoice}...`);
+      loggedInfo = document.createElement("p");
+      loggedInfo.textContent = `Draw! ${humanChoice} doesn't beat ${computerChoice}...`;
     } else if (
       (humanChoice === rock && computerChoice === scissors) ||
       (humanChoice === scissors && computerChoice === paper) ||
       (humanChoice === paper && computerChoice === rock)
     ) {
-      console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+      loggedInfo = document.createElement("p");
+      loggedInfo.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
       ++humanScore;
     } else {
-      console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+      loggedInfo = document.createElement("p");
+      loggedInfo.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
       ++computerScore;
     }
 
     // Display score
-    console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
+    const gameScore = document.createElement("p");
+    gameScore.textContent = `USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`;
+
+    gameResultsLog.appendChild(loggedInfo);
+    gameResultsLog.appendChild(gameScore);
   }
 
   btnRock.addEventListener("click", () => {
