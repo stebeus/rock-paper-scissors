@@ -23,17 +23,6 @@ function getComputerChoice() {
   }
 }
 
-// CALL a prompt to store and validate the user's input
-function getHumanChoice() {
-  const choice = prompt("Choose Rock, Paper or Scissors!").toUpperCase();
-
-  if (choice === rock || choice === paper || choice === scissors) {
-    return choice;
-  } else {
-    return `INVALID CHOICE! Insert either Rock, Paper or Scissors.`;
-  }
-}
-
 // Store score and initialize five rounds
 function playGame() {
   console.log("GAME LOADED");
