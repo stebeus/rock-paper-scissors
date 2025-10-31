@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("GAME LOADED");
-
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
 const rock = "ROCK";
 const paper = "PAPER";
@@ -39,6 +37,8 @@ function getHumanChoice() {
 
 // Store score and initialize five rounds
 function playGame() {
+  console.log("GAME LOADED");
+
   let computerScore = 0;
   let humanScore = 0;
 
