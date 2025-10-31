@@ -59,10 +59,21 @@ function playGame() {
 
     // Display score
     const gameScore = document.createElement("p");
+    const gameVictor = document.createElement("p");
+
     gameScore.textContent = `USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`;
+
+    if (humanScore === 5) {
+      gameVictor.textContent = "Game over! VICTORY";
+    } else if (computerScore === 5) {
+      gameVictor.textContent = "Game over! DEFEAT";
+    } else if (humanScore === 5 && computerScore === 5) {
+      gameVictor.textContent = "Game over! TIE";
+    }
 
     gameResultsLog.appendChild(loggedInfo);
     gameResultsLog.appendChild(gameScore);
+    gameResultsLog.appendChild(gameVictor);
   }
 
   btnRock.addEventListener("click", () => {
