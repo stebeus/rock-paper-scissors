@@ -22,6 +22,15 @@ function getComputerChoice() {
 }
 
 // CALL a prompt to store and validate the user's input
+
+const btnRock = document.querySelector("#btn-rock");
+const btnPaper = document.querySelector("#btn-paper");
+const btnScissors = document.querySelector("#btn-scissors");
+
+btnRock.addEventListener("click", (e) => {
+  console.log(e.target);
+});
+
 function getHumanChoice() {
   const choice = prompt("Choose Rock, Paper or Scissors!").toUpperCase();
 
