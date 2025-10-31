@@ -60,24 +60,32 @@ function playGame() {
     // Display score
     const gameScore = document.createElement("p");
     const gameVictor = document.createElement("p");
+    const restartPageMessage = document.createElement("p");
+    restartPageMessage.textContent =
+      "Click on one of the three choice buttons to restart the game";
 
     gameScore.textContent = `USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`;
-
-    if (humanScore === 5) {
-      gameVictor.textContent = "Game over! VICTORY";
-    } else if (computerScore === 5) {
-      gameVictor.textContent = "Game over! DEFEAT";
-    } else if (humanScore === 5 && computerScore === 5) {
-      gameVictor.textContent = "Game over! TIE";
-    }
 
     gameResultsLog.appendChild(loggedInfo);
     gameResultsLog.appendChild(gameScore);
     gameResultsLog.appendChild(gameVictor);
+
+    if (humanScore === 5) {
+      gameVictor.textContent = "Game over! VICTORY";
+      gameResultsLog.appendChild(restartPageMessage);
+    } else if (computerScore === 5) {
+      gameVictor.textContent = "Game over! DEFEAT";
+      gameResultsLog.appendChild(restartPageMessage);
+    } else if (humanScore === 5 && computerScore === 5) {
+      gameVictor.textContent = "Game over! TIE";
+      gameResultsLog.appendChild(restartPageMessage);
+    } else if (humanScore > 4 || computerScore > 4) {
+      window.location.reload();
+    }
   }
 
   btnRock.addEventListener("click", () => {
-    playRound(rock, getComputerChoice());
+    playRound(rock, scissors);
   });
 
   btnPaper.addEventListener("click", () => {
