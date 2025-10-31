@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 alert(`Welcome to Rock Paper Scissors!
 
@@ -7,12 +7,12 @@ Press F12 to play the game.
 If the console is not showing "GAME LOADED" on page load, press Cancel and refresh the page.
   `);
 
-console.log('GAME LOADED');
+console.log("GAME LOADED");
 
 // Store in three constants each one of the following strings: Rock, Paper and Scissors
-const rock = 'ROCK';
-const paper = 'PAPER';
-const scissors = 'SCISSORS';
+const rock = "ROCK";
+const paper = "PAPER";
+const scissors = "SCISSORS";
 
 // CALL the get computer choice to return the three global constants randomly
 function getComputerChoice() {
@@ -30,7 +30,7 @@ function getComputerChoice() {
 
 // CALL a prompt to store and validate the user's input
 function getHumanChoice() {
-  const choice = prompt('Choose Rock, Paper or Scissors!').toUpperCase();
+  const choice = prompt("Choose Rock, Paper or Scissors!").toUpperCase();
 
   if (choice === rock || choice === paper || choice === scissors) {
     return choice;
@@ -67,27 +67,6 @@ function playGame() {
 
     // Display score
     console.log(`USER SCORE: ${humanScore}; COMPUTER SCORE: ${computerScore}`);
-  }
-
-  // Loop to five rounds
-  for (let currentRound = 0; currentRound < 5; currentRound++) {
-    // Store the get choice functions in human and computer selections
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-
-    // Initiate round
-    playRound(humanSelection, computerSelection);
-
-    // End the game
-    if (currentRound === 4) {
-      if (humanScore === computerScore) {
-        console.log(`Game's over! TIE`);
-      } else if (humanScore > computerScore) {
-        console.log(`Game's over! VICTORY`);
-      } else {
-        console.log(`Game's over! DEFEAT`);
-      }
-    }
   }
 }
 
