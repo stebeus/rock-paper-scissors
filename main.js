@@ -85,7 +85,7 @@ function playGame() {
   }
 
   btnRock.addEventListener("click", () => {
-    playRound(rock, scissors);
+    playRound(rock, getComputerChoice());
   });
 
   btnPaper.addEventListener("click", () => {
