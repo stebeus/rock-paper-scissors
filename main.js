@@ -5,6 +5,10 @@ const rock = "ROCK";
 const paper = "PAPER";
 const scissors = "SCISSORS";
 
+const btnRock = document.querySelector("#btn-rock");
+const btnPaper = document.querySelector("#btn-paper");
+const btnScissors = document.querySelector("#btn-scissors");
+
 // CALL the get computer choice to return the three global constants randomly
 function getComputerChoice() {
   // Store a three random number generator in the get random choice constant
@@ -20,11 +24,6 @@ function getComputerChoice() {
 }
 
 // CALL a prompt to store and validate the user's input
-
-const btnRock = document.querySelector("#btn-rock");
-const btnPaper = document.querySelector("#btn-paper");
-const btnScissors = document.querySelector("#btn-scissors");
-
 function getHumanChoice() {
   const choice = prompt("Choose Rock, Paper or Scissors!").toUpperCase();
 
