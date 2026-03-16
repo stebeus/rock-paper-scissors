@@ -2,16 +2,13 @@ import { createButton } from './button.js';
 
 const controls = document.querySelector('.controls');
 
+function createControl(dataAttributeName, attributeValue) {
+  const control = createButton(dataAttributeName, attributeValue);
+  controls.append(control);
+}
+
 function createWeaponControls(weapons) {
-  for (const weapon of weapons) {
-    const weaponControl = createButton('weapon', weapon);
-    controls.append(weaponControl);
-  }
+  for (const weapon of weapons) createControl('weapon', weapon);
 }
 
-function createRestartControl() {
-  const restartControl = createButton('action', 'restart-game');
-  controls.replaceChildren(restartControl);
-}
-
-export { createRestartControl, createWeaponControls };
+export { createControl, createWeaponControls };
