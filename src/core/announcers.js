@@ -19,4 +19,13 @@ function announceRoundWinner(humanChoice, computerChoice, result) {
   return new Announcement(...content);
 }
 
-export { announceRoundWinner };
+function announceGameWinner([humanScore, computerScore]) {
+  const description =
+    humanScore > computerScore
+      ? 'You beat the computer'
+      : 'The computer beat you';
+
+  return new Announcement('Game over!', description);
+}
+
+export { announceGameWinner, announceRoundWinner };
