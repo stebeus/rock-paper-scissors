@@ -15,7 +15,7 @@ function createPlayerScore(playerIndex, playerScores) {
 function createPlayerScores(playerScores) {
   const scoreboard = document.querySelector('.scoreboard');
 
-  for (const playerIndex of playerScores) {
+  for (const playerIndex in playerScores) {
     const playerScore = createPlayerScore(playerIndex, playerScores);
     scoreboard.append(playerScore);
   }
