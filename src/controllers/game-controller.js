@@ -34,7 +34,7 @@ function restartGame() {
   renderAnnouncement();
   resetScores(playerScores);
   renderScores(playerScores);
-  createWeaponControls(weapons);
+  replaceControls(createWeaponControls, weapons);
 }
 
 export { controlGame, restartGame };
