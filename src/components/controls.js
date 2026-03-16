@@ -9,4 +9,10 @@ function createWeaponControls(weapons) {
   }
 }
 
-export { createWeaponControls };
+function createRestartControl() {
+  const restartControl = createButton('action', 'restart-game');
+
+  controls.replaceChildren(restartControl);
+}
+
+export { createRestartControl, createWeaponControls };
