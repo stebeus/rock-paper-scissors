@@ -1,7 +1,8 @@
 import { renderAnnouncement } from '../components/announcement.js';
 import {
-  createRestartControl,
+  createControl,
   createWeaponControls,
+  replaceControls,
 } from '../components/controls.js';
 import { renderScores } from '../components/scoreboard.js';
 import {
@@ -13,12 +14,18 @@ import {
   weapons,
 } from '../core/game.js';
 
+function controlGameOver(scores) {
+  if (!isGameOver(scores)) return;
+
+  const restartControl = [createControl, 'action', 'restart-game'];
+  replaceControls(...restartControl);
+}
+
 function controlGame(humanChoice) {
   const computerChoice = getComputerChoice(weapons);
   const outcome = playRound(humanChoice, computerChoice, weapons, playerScores);
 
-  if (isGameOver(playerScores)) createRestartControl();
-
+  controlGameOver(playerScores);
   renderAnnouncement(outcome);
   renderScores(playerScores);
 }
