@@ -10,10 +10,6 @@ const weapons = ['rock', 'paper', 'scissors'];
 
 const getComputerChoice = (choices) => choices[getRandomIndex(choices)];
 
-const isGameOver = (scores) => getScoreDifference(scores) === 2;
-
-const resetScores = (scores) => scores.fill(0);
-
 function evaluateChoices([human, computer], { length }, scores) {
   const result = (human - computer + length) % length;
 
@@ -24,6 +20,10 @@ function evaluateChoices([human, computer], { length }, scores) {
 
   return result;
 }
+
+const isGameOver = (scores) => getScoreDifference(scores) === 2;
+
+const resetScores = (scores) => scores.fill(0);
 
 function playRound(humanChoice, computerChoice, weapons, scores) {
   const choices = getWeaponIndexes(weapons, humanChoice, computerChoice);
