@@ -1,8 +1,10 @@
-import { getRandomIndex } from './helpers.js';
+import { getRandomIndex, getScoreDifference } from './helpers.js';
 
 const playerScores = [0, 0];
 const weapons = ['rock', 'paper', 'scissors'];
 
 const getComputerChoice = (choices) => choices[getRandomIndex(choices)];
 
-export { getComputerChoice, playerScores, weapons };
+const isGameOver = (scores) => getScoreDifference(scores) === 2;
+
+export { getComputerChoice, isGameOver, playerScores, weapons };
