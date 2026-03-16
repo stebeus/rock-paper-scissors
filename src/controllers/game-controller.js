@@ -1,4 +1,5 @@
 import { renderAnnouncement } from '../components/announcement.js';
+import { renderComputerOutput } from '../components/computer-output.js';
 import {
   createControl,
   createWeaponControls,
@@ -27,11 +28,13 @@ function controlGame(humanChoice) {
 
   controlGameOver(playerScores);
   renderAnnouncement(outcome);
+  renderComputerOutput(computerChoice);
   renderScores(playerScores);
 }
 
 function restartGame() {
   renderAnnouncement();
+  renderComputerOutput();
   resetScores(playerScores);
   renderScores(playerScores);
   replaceControls(createWeaponControls, weapons);
