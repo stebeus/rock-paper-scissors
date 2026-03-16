@@ -6,7 +6,7 @@ function createPlayerScore(playerIndex, playerScores) {
   const playerScore = playerScores[playerIndex];
 
   return parseHtml`
-    <p class="scoreboard__player-score" data-player="${playerIndex}">
+    <p class="scoreboard__player-score">
       ${playerName} score: <span data-score>${playerScore}</span>
     </p>
   `;
