@@ -1,4 +1,4 @@
-import { controlGame } from './game-controller.js';
+import { controlGame, restartGame } from './game-controller.js';
 
 function handleWeaponChoice({ target }) {
   const control = target.closest('[data-weapon]');
@@ -8,4 +8,11 @@ function handleWeaponChoice({ target }) {
   controlGame(humanChoice);
 }
 
-export { handleWeaponChoice };
+function handleRestart({ target }) {
+  const control = target.closest('[data-action="restart-game"]');
+  if (control == null) return;
+
+  restartGame();
+}
+
+export { handleRestart, handleWeaponChoice };
