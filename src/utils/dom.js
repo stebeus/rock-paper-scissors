@@ -5,7 +5,7 @@ const getRawHtml = (strings, ...values) =>
   String.raw({ raw: strings }, ...values.map(serializeHtml));
 
 function parseHtml(strings, ...values) {
-  const template = document.querySelector('template');
+  const template = document.createElement('template');
   const html = getRawHtml(strings, ...values);
 
   template.innerHTML = html;
