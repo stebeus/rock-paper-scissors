@@ -1,22 +1,22 @@
 import { parseHtml } from '../utils/dom.js';
 import { formatScore } from '../utils/formatters.js';
 
-function createPlayerScore(playerIndex, playerScores) {
+function createPlayerScore(playerIndex, scores) {
   const playerName = formatScore(playerIndex);
-  const playerScore = playerScores[playerIndex];
+  const score = scores[playerIndex];
 
   return parseHtml`
     <p class="scoreboard__player-score">
-      ${playerName} score: <span data-score>${playerScore}</span>
+      ${playerName} score: <span data-score>${score}</span>
     </p>
   `;
 }
 
-function createPlayerScores(playerScores) {
+function createPlayerScores(scores) {
   const scoreboard = document.querySelector('.scoreboard');
 
-  for (const [index] of playerScores.entries()) {
-    const playerScore = createPlayerScore(index, playerScores);
+  for (const [index] of scores.entries()) {
+    const playerScore = createPlayerScore(index, scores);
     scoreboard.append(playerScore);
   }
 }
