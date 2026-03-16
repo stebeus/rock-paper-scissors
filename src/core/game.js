@@ -12,6 +12,8 @@ const getComputerChoice = (choices) => choices[getRandomIndex(choices)];
 
 const isGameOver = (scores) => getScoreDifference(scores) === 2;
 
+const resetScores = (scores) => scores.fill(0);
+
 function evaluateChoices([human, computer], { length }, scores) {
   const result = (human - computer + length) % length;
 
@@ -32,4 +34,11 @@ function playRound(humanChoice, computerChoice, weapons, scores) {
     : announceRoundWinner(humanChoice, computerChoice, result);
 }
 
-export { getComputerChoice, isGameOver, playerScores, playRound, weapons };
+export {
+  getComputerChoice,
+  isGameOver,
+  playerScores,
+  playRound,
+  resetScores,
+  weapons,
+};
