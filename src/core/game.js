@@ -24,13 +24,12 @@ function evaluateChoices([human, computer], { length }, scores) {
 }
 
 function playRound(humanChoice, computerChoice, weapons, scores) {
-  if (isGameOver(scores)) return announceGameWinner(scores);
-
   const choices = getWeaponIndexes(weapons, humanChoice, computerChoice);
   const result = evaluateChoices(choices, weapons, scores);
-  const roundWinner = announceRoundWinner(humanChoice, computerChoice, result);
 
-  return roundWinner;
+  return isGameOver(scores)
+    ? announceGameWinner(scores)
+    : announceRoundWinner(humanChoice, computerChoice, result);
 }
 
 export { getComputerChoice, isGameOver, playerScores, playRound, weapons };
