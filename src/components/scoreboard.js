@@ -3,10 +3,11 @@ import { formatScore } from '../utils/formatters.js';
 
 function createPlayerScore(playerIndex, playerScores) {
   const playerName = formatScore(playerIndex, playerScores);
+  const playerScore = playerScores[playerIndex];
 
   return parseHtml`
     <p class="scoreboard__player-score" data-player="${playerIndex}">
-      ${playerName}
+      ${playerName} score: <span data-score>${playerScore}</span>
     </p>
   `;
 }
