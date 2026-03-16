@@ -24,11 +24,8 @@ function createPlayerScores(scores) {
 function renderScores(playerScores) {
   const scores = document.querySelectorAll('[data-score]');
 
-  let playerIndex = 0;
-
-  for (const score of scores) {
-    score.textContent = playerScores[playerIndex];
-    playerIndex++;
+  for (const [index, score] of scores.entries()) {
+    score.textContent = playerScores[index];
   }
 }
 
