@@ -10,3 +10,14 @@ function createPlayerScore(playerIndex, playerScores) {
     </p>
   `;
 }
+
+function createPlayerScores(playerScores) {
+  const scoreboard = document.querySelector('.scoreboard');
+
+  for (const playerIndex of playerScores) {
+    const playerScore = createPlayerScore(playerIndex, playerScores);
+    scoreboard.append(playerScore);
+  }
+}
+
+export { createPlayerScores };
