@@ -1,10 +1,6 @@
-function formatScore(playerIndex, playerScores) {
-  const parsedIndex = Number(playerIndex);
-  const playerName = parsedIndex === 0 ? 'Your' : 'Computer';
-
-  return `${playerName} score: ${playerScores[playerIndex]}`;
-}
+const formatPlayerName = (playerIndex) =>
+  Number(playerIndex) === 0 ? 'Your' : 'Computer';
 
 const formatButtonLabel = (label) => label.split('-').join(' ');
 
-export { formatButtonLabel, formatScore };
+export { formatButtonLabel, formatPlayerName };
