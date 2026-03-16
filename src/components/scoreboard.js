@@ -21,4 +21,15 @@ function createPlayerScores(playerScores) {
   }
 }
 
-export { createPlayerScores };
+function renderScores(playerScores) {
+  const scores = document.querySelectorAll('[data-score]');
+
+  let playerIndex = 0;
+
+  for (const score of scores) {
+    score.textContent = playerScores[playerIndex];
+    playerIndex++;
+  }
+}
+
+export { createPlayerScores, renderScores };
