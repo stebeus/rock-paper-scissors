@@ -10,10 +10,10 @@ import {
 } from '../core/game.js';
 
 function controlGame(humanChoice) {
-  if (isGameOver(playerScores)) createRestartControl();
-
   const computerChoice = getComputerChoice(weapons);
   const outcome = playRound(humanChoice, computerChoice, weapons, playerScores);
+
+  if (isGameOver(playerScores)) createRestartControl();
 
   renderAnnouncement(outcome);
   renderScores(playerScores);
