@@ -3,4 +3,6 @@ function getRandomIndex({ length }) {
   return Math.floor(randomIndex);
 }
 
-export { getRandomIndex };
+const getScoreDifference = ([human, computer]) => Math.abs(human - computer);
+
+export { getRandomIndex, getScoreDifference };
