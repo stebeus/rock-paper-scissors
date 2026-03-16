@@ -1,4 +1,9 @@
-import { getRandomIndex, getScoreDifference } from './helpers.js';
+import { announceGameWinner, announceRoundWinner } from './announcers.js';
+import {
+  getRandomIndex,
+  getScoreDifference,
+  getWeaponIndexes,
+} from './helpers.js';
 
 const playerScores = [0, 0];
 const weapons = ['rock', 'paper', 'scissors'];
@@ -18,4 +23,14 @@ function evaluateChoices([human, computer], { length }, scores) {
   return result;
 }
 
-export { getComputerChoice, isGameOver, playerScores, weapons };
+function playRound(humanChoice, computerChoice, weapons, scores) {
+  if (isGameOver(scores)) return announceGameWinner(scores);
+
+  const choices = getWeaponIndexes(weapons, humanChoice, computerChoice);
+  const result = evaluateChoices(choices, weapons, scores);
+  const roundWinner = announceRoundWinner(humanChoice, computerChoice, result);
+
+  return roundWinner;
+}
+
+export { getComputerChoice, isGameOver, playerScores, playRound, weapons };
