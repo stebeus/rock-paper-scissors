@@ -3,3 +3,14 @@ const serializeHtml = (value) =>
 
 const getRawHtml = (strings, ...values) =>
   String.raw({ raw: strings }, ...values.map(serializeHtml));
+
+function parseHtml(strings, ...values) {
+  const template = document.querySelector('template');
+  const html = getRawHtml(strings, ...values);
+
+  template.innerHTML = html;
+
+  return template.content.firstElementChild;
+}
+
+export { parseHtml };
