@@ -1,11 +1,9 @@
 function renderAnnouncement({ title, description } = {}) {
   const announcementTitle = document.querySelector('.announcement__title');
-  const announcementDescription = document.querySelector(
-    '.announcement__description',
-  );
+  const announcementDesc = document.querySelector('.announcement__description');
 
   announcementTitle.textContent = title ?? 'Choose a weapon';
-  announcementDescription.textContent =
+  announcementDesc.textContent =
     description ?? 'First to score a 2-point lead wins';
 }
 
