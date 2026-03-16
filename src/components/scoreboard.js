@@ -1,8 +1,8 @@
 import { parseHtml } from '../utils/dom.js';
-import { formatScore } from '../utils/formatters.js';
+import { formatPlayerName } from '../utils/formatters.js';
 
 function createPlayerScore(playerIndex, scores) {
-  const playerName = formatScore(playerIndex);
+  const playerName = formatPlayerName(playerIndex);
   const score = scores[playerIndex];
 
   return parseHtml`
