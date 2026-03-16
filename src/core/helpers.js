@@ -5,4 +5,9 @@ function getRandomIndex({ length }) {
 
 const getScoreDifference = ([human, computer]) => Math.abs(human - computer);
 
-export { getRandomIndex, getScoreDifference };
+function getWeaponIndexes(weapons, ...playerChoices) {
+  const getWeaponIndex = (weapon) => weapons.indexOf(weapon);
+  return playerChoices.map(getWeaponIndex);
+}
+
+export { getRandomIndex, getScoreDifference, getWeaponIndexes };
