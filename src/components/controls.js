@@ -11,7 +11,6 @@ function createWeaponControls(weapons) {
 
 function createRestartControl() {
   const restartControl = createButton('action', 'restart-game');
-
   controls.replaceChildren(restartControl);
 }
 
