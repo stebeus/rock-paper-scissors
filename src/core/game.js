@@ -8,4 +8,21 @@ function getComputerChoice({ length }) {
   return Math.floor(randomChoice);
 }
 
+function evaluateChoices(human, computer, { length }, scores) {
+  const result = (human - computer + length) % length;
+
+  let roundWinner = null;
+
+  for (const [index] of scores.entries()) {
+    const outcome = index + 1;
+
+    if (outcome === result) {
+      scores[index]++;
+      roundWinner = index;
+    }
+  }
+
+  return roundWinner;
+}
+
 export { getComputerChoice, playerScores, resetScores, weapons };
