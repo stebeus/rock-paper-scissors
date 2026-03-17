@@ -1,5 +1,5 @@
 function bindKey(eventKey, key, action, ...parameters) {
-  const keybinding = eventKey.toLocaleLowercase();
+  const keybinding = eventKey.toLowerCase();
   if (keybinding !== key) return;
 
   action(...parameters);
