@@ -1,5 +1,6 @@
 import { weapons } from '../core/game.js';
 import { controlGame, restartGame } from './game-controller.js';
+import { bindKey, bindWeaponControlKeys } from './keybindings.js';
 
 function handleWeaponChoice(target) {
   const control = target.closest('[data-weapon]');
