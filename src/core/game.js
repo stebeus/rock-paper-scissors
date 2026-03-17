@@ -25,4 +25,9 @@ function evaluateChoices(human, computer, { length }, scores) {
   return roundWinner;
 }
 
-export { getComputerChoice, playerScores, resetScores, weapons };
+function isGameOver([humanScore, computerScore]) {
+  const difference = Math.abs(humanScore - computerScore);
+  return difference === 2;
+}
+
+export { getComputerChoice, isGameOver, playerScores, resetScores, weapons };
