@@ -6,7 +6,7 @@ function handleKeybindings({ key }) {
   bindKey('q', restartGame);
 }
 
-function handleWeaponChoice({ target }) {
+function handleWeaponChoice(target) {
   const control = target.closest('[data-weapon]');
   if (control == null) return;
 
@@ -14,11 +14,16 @@ function handleWeaponChoice({ target }) {
   controlGame(humanChoice);
 }
 
-function handleRestart({ target }) {
+function handleRestart(target) {
   const control = target.closest('[data-action="restart-game"]');
   if (control == null) return;
 
   restartGame();
 }
 
-export { handleRestart, handleWeaponChoice };
+function delegateEvents({ target }) {
+  handleWeaponChoice(target);
+  handleRestart(target);
+}
+
+export { delegateEvents };
