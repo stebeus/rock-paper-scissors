@@ -8,20 +8,20 @@ function getComputerChoice({ length }) {
   return Math.floor(randomChoice);
 }
 
-function evaluateChoices(human, computer, { length }, scores) {
-  const result = (human - computer + length) % length;
-
-  let roundWinner = null;
-
+function getRoundWinner(scores, result) {
   for (const [index] of scores.entries()) {
     const outcome = index + 1;
 
     if (outcome === result) {
       scores[index]++;
-      roundWinner = index;
+      return index;
     }
   }
+}
 
+function evaluateChoices(human, computer, { length }, scores) {
+  const result = (human - computer + length) % length;
+  const roundWinner = getRoundWinner(scores, result);
   return roundWinner;
 }
 
