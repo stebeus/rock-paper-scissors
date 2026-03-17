@@ -4,3 +4,12 @@ function bindKey(key, action, ...parameters) {
 
   action(...parameters);
 }
+
+function bindWeaponControlKeys(weapons, gameController) {
+  for (const weapon of weapons) {
+    const key = weapon.charAt(0);
+    bindKey(key, gameController, weapon);
+  }
+}
+
+export { bindWeaponControlKeys };
