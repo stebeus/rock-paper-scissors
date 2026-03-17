@@ -3,4 +3,9 @@ const weapons = ['rock', 'paper', 'scissors'];
 
 const resetScores = (scores) => scores.fill(0);
 
-export { playerScores, resetScores, weapons };
+function getComputerChoice({ length }) {
+  const randomChoice = Math.random() * length;
+  return Math.floor(randomChoice);
+}
+
+export { getComputerChoice, playerScores, resetScores, weapons };
