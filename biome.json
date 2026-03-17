@@ -35,6 +35,12 @@
       "quoteStyle": "single"
     }
   },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "enabled": true
+    }
+  },
   "css": {
     "formatter": {
       "quoteStyle": "single"
