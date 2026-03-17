@@ -5,10 +5,10 @@ function bindKey(eventKey, key, action, ...parameters) {
   action(...parameters);
 }
 
-function bindWeaponControlKeys(weapons, gameController) {
+function bindWeaponControlKeys(eventKey, weapons, gameController) {
   for (const weapon of weapons) {
     const key = weapon.charAt(0);
-    bindKey(key, gameController, weapon);
+    bindKey(eventKey, key, gameController, weapon);
   }
 }
 
