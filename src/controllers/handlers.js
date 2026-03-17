@@ -22,8 +22,8 @@ function delegateEvents({ target }) {
 }
 
 function handleKeybindings({ key }) {
-  bindWeaponControlKeys(weapons, controlGame);
-  bindKey('q', restartGame);
+  bindWeaponControlKeys(key, weapons, controlGame);
+  bindKey(key, 'q', restartGame);
 }
 
 export { delegateEvents };
