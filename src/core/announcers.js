@@ -1,5 +1,8 @@
 class Announcement {
-  constructor(title, description) {
+  constructor(
+    title = 'Choose a weapon',
+    description = 'First to score a 2-point lead wins',
+  ) {
     this.title = title;
     this.description = description;
   }
@@ -28,4 +31,4 @@ function announceGameWinner([humanScore, computerScore]) {
   return new Announcement('Game over!', description);
 }
 
-export { announceGameWinner, announceRoundWinner };
+export { Announcement, announceGameWinner, announceRoundWinner };
