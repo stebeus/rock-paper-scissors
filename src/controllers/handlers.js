@@ -1,5 +1,6 @@
+import { isGameOver, playerScores } from '../core/game.js';
 import { controlGame, restartGame } from './game-controller.js';
-import { bindRestartKey, bindWeaponKeys } from './keybindings.js';
+import { bindKey, bindWeaponKeys } from './keybindings.js';
 
 function handleWeaponChoice(target) {
   const control = target.closest('[data-weapon]');
@@ -22,8 +23,12 @@ function delegateEvents({ target }) {
 }
 
 function handleKeybindings({ key }) {
+  if (isGameOver(playerScores)) {
+    bindKey(key, 'q', restartGame);
+    return;
+  }
+
   bindWeaponKeys(key);
-  bindRestartKey(key);
 }
 
 export { delegateEvents, handleKeybindings };
