@@ -15,7 +15,19 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"correctness": {
+				"useImportExtensions": "on"
+			},
+			"style": {
+				"useFilenamingConvention": {
+					"level": "on",
+					"options": {
+						"filenameCases": ["kebab-case"]
+					}
+				},
+				"useNamingConvention": "on"
+			}
 		}
 	},
 	"javascript": {
