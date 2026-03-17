@@ -1,6 +1,5 @@
-import { weapons } from '../core/game.js';
 import { controlGame, restartGame } from './game-controller.js';
-import { bindKey, bindWeaponControlKeys } from './keybindings.js';
+import { bindRestartKey, bindWeaponKeys } from './keybindings.js';
 
 function handleWeaponChoice(target) {
   const control = target.closest('[data-weapon]');
@@ -23,8 +22,8 @@ function delegateEvents({ target }) {
 }
 
 function handleKeybindings({ key }) {
-  bindWeaponControlKeys(key, weapons, controlGame);
-  bindKey(key, 'q', restartGame);
+  bindWeaponKeys(key);
+  bindRestartKey(key);
 }
 
-export { delegateEvents };
+export { delegateEvents, handleKeybindings };
