@@ -8,11 +8,11 @@ function bindKey(eventKey, key, action, ...parameters) {
   action(...parameters);
 }
 
-function bindWeaponControlKeys(eventKey) {
+function bindWeaponKeys(eventKey) {
   for (const weapon of weapons) {
     const key = weapon.charAt(0);
     bindKey(eventKey, key, controlGame, weapon);
   }
 }
 
-export { bindKey, bindWeaponControlKeys };
+export { bindKey, bindWeaponKeys };
