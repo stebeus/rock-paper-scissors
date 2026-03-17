@@ -1,4 +1,6 @@
 const playerScores = [0, 0];
 const weapons = ['rock', 'paper', 'scissors'];
 
-export { playerScores, weapons };
+const resetScores = (scores) => scores.fill(0);
+
+export { playerScores, resetScores, weapons };
