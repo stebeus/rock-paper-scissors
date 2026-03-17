@@ -1,3 +1,3 @@
 # Rock paper scissors
 
-This game is ran entirely inside the browser console.
+Offline player versus computer rock paper scissors game.
