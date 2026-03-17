@@ -12,4 +12,4 @@ function bindWeaponControlKeys(weapons, gameController) {
   }
 }
 
-export { bindWeaponControlKeys };
+export { bindKey, bindWeaponControlKeys };
