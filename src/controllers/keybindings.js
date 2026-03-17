@@ -1,5 +1,5 @@
-import { weapons } from '../core/game.js';
-import { controlGame } from './game-controller.js';
+import { isGameOver, playerScores, weapons } from '../core/game.js';
+import { controlGame, restartGame } from './game-controller.js';
 
 function bindKey(eventKey, key, action, ...parameters) {
   const keybinding = eventKey.toLowerCase();
@@ -15,4 +15,11 @@ function bindWeaponKeys(eventKey) {
   }
 }
 
-export { bindKey, bindWeaponKeys };
+function bindRestartKey(eventKey) {
+  if (isGameOver(playerScores)) {
+    bindKey(eventKey, 'q', restartGame);
+    return;
+  }
+}
+
+export { bindRestartKey, bindWeaponKeys };
