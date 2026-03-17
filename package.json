@@ -2,5 +2,8 @@
   "name": "rock-paper-scissors",
   "version": "0.1.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.7"
+  }
 }
