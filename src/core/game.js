@@ -1,3 +1,6 @@
+import { formatChoices } from '../utils/formatters.js';
+import { announceGameWinner, announceOutcome } from './announcers.js';
+
 const playerScores = [0, 0];
 const weapons = ['rock', 'paper', 'scissors'];
 
@@ -30,4 +33,26 @@ function isGameOver([humanScore, computerScore]) {
   return difference === 2;
 }
 
-export { getComputerChoice, isGameOver, playerScores, resetScores, weapons };
+function playRound(humanChoice, computerChoice, weapons, scores) {
+  const roundWinner = evaluateChoices(
+    humanChoice,
+    computerChoice,
+    weapons,
+    scores,
+  );
+
+  const formattedChoices = formatChoices(weapons, humanChoice, computerChoice);
+
+  return isGameOver(scores)
+    ? announceGameWinner(scores)
+    : announceOutcome(formattedChoices, roundWinner);
+}
+
+export {
+  getComputerChoice,
+  isGameOver,
+  playerScores,
+  playRound,
+  resetScores,
+  weapons,
+};
