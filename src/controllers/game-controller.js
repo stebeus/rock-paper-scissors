@@ -1,6 +1,10 @@
 import { renderAnnouncement } from '../components/announcement.js';
 import { renderComputerOutput } from '../components/computer-output.js';
-import { createControl, replaceControls } from '../components/controls.js';
+import {
+  createControl,
+  createWeaponControls,
+  replaceControls,
+} from '../components/controls.js';
 import { renderScore } from '../components/scoreboard.js';
 import { announceGameWinner, announceOutcome } from '../core/announcers.js';
 import {
@@ -53,4 +57,11 @@ function controlScoresReset(scores) {
   }
 }
 
-export { controlGame };
+function restartGame() {
+  renderAnnouncement();
+  renderComputerOutput();
+  controlScoresReset(playerScores);
+  replaceControls(createWeaponControls, weapons);
+}
+
+export { controlGame, restartGame };
