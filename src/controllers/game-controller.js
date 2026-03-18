@@ -42,8 +42,8 @@ function controlGame(humanChoice) {
     playerScores,
   );
 
-  controlGameOver(playerScores);
   controlAnnouncement(announceOutcome, formattedChoices, roundWinner);
+  controlGameOver(playerScores);
 
   renderComputerOutput(weapons[computerChoice]);
   renderScore(roundWinner, playerScores);
