@@ -7,4 +7,10 @@ function createControl(dataAttributeName, attributeValue) {
   controls.append(control);
 }
 
-export { createControl };
+function createWeaponControls(weapons) {
+  for (const [index] of weapons.entries()) {
+    createControl('choice', index);
+  }
+}
+
+export { createControl, createWeaponControls };
