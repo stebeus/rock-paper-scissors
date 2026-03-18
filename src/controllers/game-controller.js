@@ -1,6 +1,16 @@
 import { renderAnnouncement } from '../components/announcement.js';
+import { renderComputerOutput } from '../components/computer-output.js';
 import { createControl, replaceControls } from '../components/controls.js';
-import { isGameOver } from '../core/game.js';
+import { renderScore } from '../components/scoreboard.js';
+import { announceOutcome } from '../core/announcers.js';
+import {
+  evaluateChoices,
+  getComputerChoice,
+  isGameOver,
+  playerScores,
+  weapons,
+} from '../core/game.js';
+import { formatChoices } from '../utils/formatters.js';
 
 function controlAnnouncement(announcer, ...announcerParameters) {
   const announcement = announcer(...announcerParameters);
@@ -11,3 +21,23 @@ function controlGameOver(scores) {
   if (!isGameOver(scores)) return;
   replaceControls(createControl, 'action', 'restart', 'Restart game');
 }
+
+function controlGame(humanChoice) {
+  const computerChoice = getComputerChoice(weapons);
+  const formattedChoices = formatChoices(weapons, humanChoice, computerChoice);
+
+  const roundWinner = evaluateChoices(
+    humanChoice,
+    computerChoice,
+    weapons,
+    playerScores,
+  );
+
+  controlGameOver(playerScores);
+  controlAnnouncement(announceOutcome, formattedChoices, roundWinner);
+
+  renderComputerOutput(weapons[computerChoice]);
+  renderScore(roundWinner, playerScores);
+}
+
+export { controlGame };
