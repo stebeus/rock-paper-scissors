@@ -8,6 +8,7 @@ import {
   getComputerChoice,
   isGameOver,
   playerScores,
+  resetScores,
   weapons,
 } from '../core/game.js';
 import { formatChoices } from '../utils/formatters.js';
@@ -42,6 +43,14 @@ function controlGame(humanChoice) {
 
   renderComputerOutput(weapons[computerChoice]);
   renderScore(roundWinner, playerScores);
+}
+
+function controlScoresReset(scores) {
+  resetScores(scores);
+
+  for (const [index] of scores.entries()) {
+    renderScore(index, scores);
+  }
 }
 
 export { controlGame };
