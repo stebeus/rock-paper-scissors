@@ -7,3 +7,5 @@ function handleWeaponChoice({ target }) {
 }
 
 const handleRestart = () => restartGame();
+
+export { handleRestart, handleWeaponChoice };
