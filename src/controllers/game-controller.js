@@ -46,7 +46,8 @@ function controlGame(humanChoice) {
   controlGameOver(playerScores);
 
   renderComputerOutput(weapons[computerChoice]);
-  renderScore(roundWinner, playerScores);
+
+  if (roundWinner != null) renderScore(roundWinner, playerScores);
 }
 
 function controlScoresReset(scores) {
