@@ -3,7 +3,7 @@ function elementFromHtml(strings, ...values) {
     value instanceof Element ? value.outerHTML : value;
 
   const getRawHtml = () =>
-    String.raw({ strings }, ...values.map(serializeHtml));
+    String.raw({ raw: strings }, ...values.map(serializeHtml));
 
   const template = document.createElement('template');
   const rawHtml = getRawHtml();
