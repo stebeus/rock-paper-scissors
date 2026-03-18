@@ -9,4 +9,7 @@ function formatChoices(weapons, ...choices) {
   return formatted;
 }
 
-export { formatChoices };
+const formatPlayerName = (playerIndex) =>
+  playerIndex === 0 ? 'Your' : 'Computer';
+
+export { formatChoices, formatPlayerName };
