@@ -5,6 +5,6 @@ import { createPlayerScores } from './components/scoreboard.js';
 import { playerScores, weapons } from './core/game.js';
 
 renderAnnouncement();
-renderComputerOutput;
+renderComputerOutput();
 createPlayerScores(playerScores);
 createWeaponControls(weapons);
