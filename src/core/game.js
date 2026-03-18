@@ -49,6 +49,7 @@ function playRound(humanChoice, computerChoice, weapons, scores) {
 }
 
 export {
+  evaluateChoices,
   getComputerChoice,
   isGameOver,
   playerScores,
