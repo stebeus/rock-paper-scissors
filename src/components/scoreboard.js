@@ -22,7 +22,7 @@ function createPlayerScores(scores) {
 }
 
 function renderScore(playerIndex, scores) {
-  const playerScore = `[data-player=${playerIndex}]`;
+  const playerScore = `[data-player="${playerIndex}"]`;
   const score = document.querySelector(playerScore);
 
   score.textContent = scores[playerIndex];
