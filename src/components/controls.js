@@ -2,14 +2,14 @@ import { createButton } from './button.js';
 
 const controls = document.querySelector('.controls');
 
-function createControl(dataAttributeName, attributeValue) {
-  const control = createButton(dataAttributeName, attributeValue);
+function createControl(dataAttributeName, attributeValue, label) {
+  const control = createButton(dataAttributeName, attributeValue, label);
   controls.append(control);
 }
 
 function createWeaponControls(weapons) {
-  for (const [index] of weapons.entries()) {
-    createControl('choice', index);
+  for (const [index, weapon] of weapons.entries()) {
+    createControl('choice', index, weapon);
   }
 }
 
