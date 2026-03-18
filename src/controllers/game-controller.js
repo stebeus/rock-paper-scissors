@@ -28,7 +28,7 @@ function controlGameOver(scores) {
   const restartControlParameters = ['action', 'restart', 'Restart game'];
 
   controlAnnouncement(announceGameWinner, scores);
-  replaceControls(createControl, restartControlParameters);
+  replaceControls(createControl, ...restartControlParameters);
 }
 
 function controlGame(humanChoice) {
