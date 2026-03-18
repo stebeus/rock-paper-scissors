@@ -20,8 +20,10 @@ function controlAnnouncement(announcer, ...announcerParameters) {
 function controlGameOver(scores) {
   if (!isGameOver(scores)) return;
 
+  const restartControlParameters = ['action', 'restart', 'Restart game'];
+
   controlAnnouncement(announceGameWinner, scores);
-  replaceControls(createControl, 'action', 'restart', 'Restart game');
+  replaceControls(createControl, restartControlParameters);
 }
 
 function controlGame(humanChoice) {
