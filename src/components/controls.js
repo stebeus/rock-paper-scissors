@@ -13,12 +13,12 @@ function createWeaponControls(weapons) {
   }
 }
 
-function replaceControls(controlCreator, ...parameters) {
+function replaceControls(controlCreator, ...controlParameters) {
   const hasControls = controls.hasChildNodes();
   if (!hasControls) return;
 
   controls.innerHTML = '';
-  controlCreator(...parameters);
+  controlCreator(...controlParameters);
 }
 
 export { createControl, createWeaponControls, replaceControls };
