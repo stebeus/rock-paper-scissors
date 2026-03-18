@@ -1,3 +1,18 @@
+function createElement(strings, ...values) {
+  const serializeHtml = (value) =>
+    value instanceof Element ? value.outerHTML : value;
+
+  const getRawHtml = () =>
+    String.raw({ strings }, ...values.map(serializeHtml));
+
+  const template = document.createElement('template');
+  const rawHtml = getRawHtml();
+
+  template.innerHTML = rawHtml;
+
+  return template.content.firstElementChild;
+}
+
 function delegateEventListener(type, selector, listener, parent = document) {
   function handleDelegation(event) {
     const element = event.target.closest(selector);
@@ -9,4 +24,4 @@ function delegateEventListener(type, selector, listener, parent = document) {
   parent.addEventListener(type, handleDelegation);
 }
 
-export { delegateEventListener };
+export { createElement, delegateEventListener };
