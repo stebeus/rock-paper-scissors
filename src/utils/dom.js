@@ -1,4 +1,4 @@
-function createElement(strings, ...values) {
+function elementFromHtml(strings, ...values) {
   const serializeHtml = (value) =>
     value instanceof Element ? value.outerHTML : value;
 
@@ -24,4 +24,4 @@ function delegateEventListener(type, selector, listener, parent = document) {
   parent.addEventListener(type, handleDelegation);
 }
 
-export { createElement, delegateEventListener };
+export { delegateEventListener, elementFromHtml };

@@ -1,7 +1,7 @@
-import { createElement } from '../utils/dom.js';
+import { elementFromHtml } from '../utils/dom.js';
 
 function createButton(dataAttributeName, attributeValue) {
-  return createElement`
+  return elementFromHtml`
     <button type="button" data-${dataAttributeName}="${attributeValue}">
       ${attributeValue}
     </button>
