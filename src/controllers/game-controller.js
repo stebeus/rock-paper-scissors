@@ -3,5 +3,5 @@ import { isGameOver } from '../core/game.js';
 
 function controlGameOver(scores) {
   if (!isGameOver(scores)) return;
-  replaceControls(createControl, 'restart', 'Restart game');
+  replaceControls(createControl, 'action', 'restart', 'Restart game');
 }
