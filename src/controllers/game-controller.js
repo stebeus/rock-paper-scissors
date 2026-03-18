@@ -2,7 +2,7 @@ import { renderAnnouncement } from '../components/announcement.js';
 import { renderComputerOutput } from '../components/computer-output.js';
 import { createControl, replaceControls } from '../components/controls.js';
 import { renderScore } from '../components/scoreboard.js';
-import { announceOutcome } from '../core/announcers.js';
+import { announceGameWinner, announceOutcome } from '../core/announcers.js';
 import {
   evaluateChoices,
   getComputerChoice,
@@ -19,6 +19,8 @@ function controlAnnouncement(announcer, ...announcerParameters) {
 
 function controlGameOver(scores) {
   if (!isGameOver(scores)) return;
+
+  controlAnnouncement(announceGameWinner, scores);
   replaceControls(createControl, 'action', 'restart', 'Restart game');
 }
 
