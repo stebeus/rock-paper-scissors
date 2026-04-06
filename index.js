@@ -26,3 +26,8 @@ function evaluateChoices(human, computer, { length }, scores) {
   const roundWinner = getRoundWinner(scores, result);
   return roundWinner;
 }
+
+function isGameOver([humanScore, computerScore]) {
+  const difference = Math.abs(humanScore - computerScore);
+  return difference === 2;
+}
