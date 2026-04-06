@@ -9,3 +9,6 @@ function announceOutcome([humanChoice, computerChoice], roundWinner) {
 
   return roundWinner === 0 ? outcomes[1] : outcomes[2];
 }
+
+const announceGameWinner = ([humanScore, computerScore]) =>
+  humanScore > computerScore ? 'You win!' : 'You lose...';
