@@ -3,3 +3,6 @@ export function elementFromHtml(html) {
   template.innerHTML = html.trim();
   return template.content.firstElementChild;
 }
+
+export const formatPlayerName = (playerIndex) =>
+  playerIndex === 0 ? 'Your' : 'Computer';
