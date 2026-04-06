@@ -20,3 +20,9 @@ function getRoundWinner(scores, result) {
     outcome += 1;
   }
 }
+
+function evaluateChoices(human, computer, { length }, scores) {
+  const result = (human - computer + length) % length;
+  const roundWinner = getRoundWinner(scores, result);
+  return roundWinner;
+}
